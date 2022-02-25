@@ -4,11 +4,7 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,8 +16,7 @@
     "isolatedModules": false,
     "noEmit": true,
     "jsx": "react-jsx",
+    "baseUrl": "src"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
