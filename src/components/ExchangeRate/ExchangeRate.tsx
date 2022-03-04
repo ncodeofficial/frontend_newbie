@@ -17,7 +17,7 @@ const ExchangeRate = ({ eurInfo }: IExchangeRateProps): React.ReactElement => {
   } = eurInfo;
 
   return (
-    <div>
+    <div className="ml-5 my-5">
       <h1>환율기준 (1 유로)</h1>
 
       <div>
