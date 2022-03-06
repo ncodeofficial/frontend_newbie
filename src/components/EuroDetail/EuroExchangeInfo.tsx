@@ -40,7 +40,7 @@ function EuroExchangeInfo({
   return (
     <StyledEuroExchangeInfo>
       {tableInfos.map((info) => (
-        <StyledInfoTable>
+        <StyledInfoTable key={info.head}>
           <Text color="600">{info.head}</Text>
           <Text textAlign="end" color="700" isBold>
             {EuroUtils.getReadablePrice(info.content)}
