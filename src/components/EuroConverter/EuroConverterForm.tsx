@@ -35,10 +35,18 @@ function EuroConverterForm({ onInputChange, euroInput, krwValue }: EuroConverter
         type="number"
         width={300}
         onChange={onInputChange}
+        placeholder="유로"
         value={euroInput.toString()}
       />
       <div>→</div>
-      <Input name="krw-input" label="KRW (원)" disabled value={krwValue} width={300} />
+      <Input
+        name="krw-input"
+        label="KRW (원)"
+        disabled
+        value={krwValue}
+        width={300}
+        placeholder="원"
+      />
     </StyledEuroConverterForm>
   );
 }
