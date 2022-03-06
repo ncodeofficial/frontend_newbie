@@ -4,6 +4,7 @@ import { useState } from 'react';
 import EuroUtils from 'utils/euroUtils';
 import EuroConverterForm from './EuroConverterForm';
 import styled from 'styled-components';
+import { useCallback } from 'react';
 
 const StyledEuroConverter = styled.div`
   width: 100%;
@@ -25,9 +26,9 @@ function EuroConverter({ basePrice }: EuroConverterProps) {
     return EuroUtils.getReadablePrice(value);
   }, [basePrice, euroInput]);
 
-  const handleEuroInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleEuroInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setEuroInput(Number(e.target.value));
-  };
+  }, []);
 
   return (
     <StyledEuroConverter>

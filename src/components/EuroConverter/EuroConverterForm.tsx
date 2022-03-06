@@ -43,4 +43,4 @@ function EuroConverterForm({ onInputChange, euroInput, krwValue }: EuroConverter
   );
 }
 
-export default EuroConverterForm;
+export default React.memo(EuroConverterForm);
