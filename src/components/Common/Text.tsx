@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export type StyledTextProps = {
+interface StyledTextProps {
   fontSize?: string;
   color?: string;
   customWidth?: number;
   isBold?: boolean;
   textAlign?: 'center' | 'start' | 'end';
-};
+}
 
-type TextProps = {
+interface TextProps extends StyledTextProps {
   className?: string;
   children: React.ReactNode;
-} & StyledTextProps;
+}
 
 const StyledText = styled.div<StyledTextProps>`
   word-break: break-all;
