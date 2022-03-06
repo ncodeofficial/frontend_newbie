@@ -31,7 +31,7 @@ function EuroConverter({ basePrice }: EuroConverterProps) {
   }, []);
 
   return (
-    <StyledEuroConverter>
+    <StyledEuroConverter data-testid={'euro-converter'}>
       <EuroConverterForm
         krwValue={krwValue}
         onInputChange={handleEuroInputChange}

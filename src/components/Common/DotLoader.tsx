@@ -74,7 +74,7 @@ const StyledDotLoaderWrapper = styled.div<DotLoaderProps>`
 
 function DotLoader({ customHeight }: DotLoaderProps) {
   return (
-    <StyledDotLoaderWrapper customHeight={customHeight}>
+    <StyledDotLoaderWrapper customHeight={customHeight} data-testid="dot-loader">
       <StyledDotLoader>
         <div></div>
         <div></div>

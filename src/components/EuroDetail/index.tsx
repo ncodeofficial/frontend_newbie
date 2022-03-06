@@ -32,7 +32,7 @@ function EuroDetail({ euroInfo }: EuroDetailProps) {
   }, [basePrice, changePrice]);
 
   return (
-    <StyledEuroDetail>
+    <StyledEuroDetail data-testid="euro-detail">
       <EuroBasicInfo
         changePrice={changePrice}
         changePercent={changePercent}
