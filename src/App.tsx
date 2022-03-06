@@ -4,9 +4,10 @@ import CommonLayout from 'layouts/CommonLayout';
 import EuroDetail from 'components/EuroDetail';
 import EuroConverter from 'components/EuroConverter';
 import DotLoader from 'components/Common/DotLoader';
+import Overlay from 'components/Common/Overlay';
 
 export const App = () => {
-  const { getEuroInfo, euroInfo, isLoading } = useEuro();
+  const { getEuroInfo, euroInfo, isLoading, isError } = useEuro();
 
   useEffect(() => {
     getEuroInfo();
@@ -14,6 +15,7 @@ export const App = () => {
 
   return (
     <CommonLayout>
+      {isError && <Overlay />}
       {euroInfo && !isLoading ? (
         <>
           <EuroDetail euroInfo={euroInfo} />
