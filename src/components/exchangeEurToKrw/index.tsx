@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { useState } from "react";
 import { EurInfoType } from "../../types";
 import { isUptoTwoDecimalPoint, exchangeEurToKrw } from "../../utils";
@@ -10,8 +11,11 @@ const ExchangeEurToKrw = ({ eurInfo }: EurInfoProps) => {
   const { basePrice } = eurInfo;
   const [euro, setEuro] = useState<string>("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
-    isUptoTwoDecimalPoint(e.target.value) && setEuro(e.target.value);
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) =>
+      isUptoTwoDecimalPoint(e.target.value) && setEuro(e.target.value),
+    []
+  );
 
   return (
     <>
