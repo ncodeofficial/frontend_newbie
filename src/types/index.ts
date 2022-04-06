@@ -1,0 +1,37 @@
+export interface EurInfoType {
+  basePrice: number;
+  cashBuyingPrice: number;
+  cashSellingPrice: number;
+  change?: string;
+  changePrice: number;
+  changeRate?: number;
+  code?: string;
+  country?: string;
+  createdAt?: Date;
+  currencyCode?: string;
+  currencyName?: string;
+  currencyUnit?: number;
+  date?: Date;
+  exchangeCommission?: number;
+  fcSellingPrice?: null;
+  high52wDate?: Date;
+  high52wPrice?: number;
+  highPrice?: number;
+  id?: number;
+  low52wDate?: Date;
+  low52wPrice?: number;
+  lowPrice?: number;
+  modifiedAt?: Date;
+  name?: string;
+  openingPrice: number;
+  provider?: string;
+  recurrenceCount?: number;
+  signedChangePrice?: number;
+  signedChangeRate?: number;
+  tcBuyingPrice?: null;
+  time?: string;
+  timestamp?: number;
+  ttBuyingPrice: number;
+  ttSellingPrice: number;
+  usDollarRate?: number;
+}
